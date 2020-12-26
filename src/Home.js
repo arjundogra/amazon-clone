@@ -16,12 +16,32 @@ function Home() {
             price={19.99}
             rating={3}
           />
-          <Product />
+          <Product
+            title="Heading1"
+            image="https://blog.lulu.com/wp-content/uploads/2020/01/Tammy-Salyer.jpg"
+            price={19.99}
+            rating={3}
+          />
         </div>
         <div className="home_row">
-          <Product />
-          <Product />
-          <Product />
+          <Product
+            title="Heading1"
+            image="https://blog.lulu.com/wp-content/uploads/2020/01/Tammy-Salyer.jpg"
+            price={19.99}
+            rating={3}
+          />
+          <Product
+            title="Heading1"
+            image="https://blog.lulu.com/wp-content/uploads/2020/01/Tammy-Salyer.jpg"
+            price={19.99}
+            rating={3}
+          />
+          <Product
+            title="Heading1"
+            image="https://blog.lulu.com/wp-content/uploads/2020/01/Tammy-Salyer.jpg"
+            price={19.99}
+            rating={3}
+          />
         </div>
         <div className="home_row"></div>
         <div className="home_row"></div>
