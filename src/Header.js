@@ -6,7 +6,8 @@ import { useStateValue } from "./StateProvider";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 
 function Header() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+  console.log(!user);
   return (
     <div className="header">
       <Link to="/">
@@ -22,14 +23,16 @@ function Header() {
       </div>
       <div className="header_nav">
         <div className="header_options">
-          <Link to="/login">
-            <span className="header_nav_option_one">Hello</span>
-            <span className="header_nav_option_two">User</span>
-          </Link>
+          <span className="header_nav_option_one">Hello</span>
+          <span className="header_nav_option_two">User</span>
         </div>
         <div className="header_options">
-          <span className="header_nav_option_one">User</span>
-          <span className="header_nav_option_two">sometging</span>
+          <Link to="/login">
+            <span className="header_nav_option_one">User</span>
+            <span className="header_nav_option_two">
+              {!user ? "Log In" : "Log Out"}
+            </span>
+          </Link>
         </div>
         <div className="header_options">
           <span className="header_nav_option_one">Join Prime</span>

@@ -13,18 +13,20 @@ function Login() {
         console.log("Signed In");
       })
       .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
+        alert(error.message);
       });
   };
   const signUp = (e) => {
     e.preventDefault();
-    auth.createUserWithEmailAndPassword(Email, Password).then((user) => {
-      console.log("🌝", user);
-      if (user) {
-        history.push("/");
-      }
-    });
+    auth
+      .createUserWithEmailAndPassword(Email, Password)
+      .then((user) => {
+        console.log("🌝", user);
+        if (user) {
+          history.push("/");
+        }
+      })
+      .catch((error) => alert(error.message));
   };
 
   return (
